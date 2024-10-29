@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="https://kit.fontawesome.com/bf60b033ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/task.css" />
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav>
+        <div class="top-nav">
+            <div class="logo">
+                <h1>TaskFlow</h1>
+            </div>
+            <div class="middle-section">
+                <input type="text" placeholder="Search..." class="search-bar" />
+            </div>
+            <div class="right-section">
+                <a href="#" class="material-symbols-outlined">help</a>
+                <a href="#" class="material-symbols-outlined">settings</a>
+                <a href="#" class="material-symbols-outlined">account_circle</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="menu-1">
+            <h2>Menu</h2>
+            <a href="#" class="toggle-sidebar material-symbols-outlined">menu</a>
+        </div>
+        <hr />
+        <div class="links">
+            <a href="#" class="material-symbols-outlined links-icons">home</a>
+            <h3>Home</h3>
+        </div>
+        <div class="links">
+            <a href="#" class="material-symbols-outlined links-icons">task</a>
+            <h3 class="task-heading">Tasks</h3>
+        </div>
+        <div class="links">
+            <a href="#" class="material-symbols-outlined links-icons other-class">team_dashboard</a>
+            <h3 id="boards">Boards</h3>
+        </div>
+        <div class="links">
+            <a href="#" class="material-symbols-outlined links-icons">monitoring</a>
+            <h3>Graph view</h3>
+        </div>
+        <div class="links">
+            <a href="#" class="material-symbols-outlined links-icons">settings</a>
+            <h3>Settings</h3>
+        </div>
+        <div class="links end">
+            <a href="#" class="material-symbols-outlined links-icons">logout</a>
+            <h3>Log out</h3>
+        </div>
+    </div>
+
+    <section class="section-1">
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Task Section -->
+            <div class="task-section">
+                <div class="task-header">
+                    <div class="task-view">
+                        <a href="#" class="material-symbols-outlined">task</a>
+                        <h1>Tasks</h1>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="material-symbols-outlined">swap_vert</a>
+                        <a href="#" class="material-symbols-outlined">list</a>
+                        <a href="#" class="material-symbols-outlined">grid_view</a>
+                    </div>
+                </div>
+
+                <div class="add-task">
+                    <!-- Input field -->
+                    <div class="input-container">
+                        <input type="text" placeholder="Add a task..." id="newTask" />
+                        <select id="taskPriority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+
+                    <!-- Icons and Add button below the input field -->
+                    <div class="action-container">
+                        <div class="icon-list">
+                            <span class="material-symbols-outlined" id="calendarIcon">calendar_month</span>
+                            <span class="material-symbols-outlined">notifications</span>
+                            <span class="material-symbols-outlined">autorenew</span>
+                        </div>
+                        <button id="addTaskBtn">Add</button>
+                    </div>
+                </div>
+
+                <!-- Task Grid with Columns -->
+                <div class="task-grid" style="display: none">
+                    <div class="task-header-row">
+                        <div class="task-column">Title</div>
+                        <div class="task-column">Priority</div>
+                        <div class="task-column">Date</div>
+                        <div class="task-column">Description</div>
+                    </div>
+                    <div class="task-list">
+                        <!-- Dynamically Added Tasks Will Appear Here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar-2 on the Right Side (Initially Hidden) -->
+            <div class="sidebar-2">
+                <h2>Task Details</h2>
+                <div class="task-details-content">
+                    <h3 id="taskTitle">Task Title</h3>
+                    <div class="task-actions">
+                        <button id="editTaskBtn"><span>✏️</span> Edit</button>
+                        <button id="dateBtn"><span>📅</span>Date</button>
+                        <button id="deleteTaskBtn"><span>❌</span> Delete</button>
+                    </div>
+                    <h5>Description</h5>
+                    <textarea placeholder="Notes..." id="taskDescription"></textarea>
+                    <!-- Save button after textarea -->
+                    <button class="save-btn" id="saveTaskBtn">Save</button>
+                </div>
+                  <button class="close-btn" id="closeSidebarBtn">Close</button>
+            </div>
+
+            <!-- Calendar date-picker modal -->
+            <div id="calendarModal" class="modal">
+                <input type="date" id="taskDate" />
+                <input type="time" id="taskTime" />
+                <button id="saveDateTimeBtn">Save</button>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./js/task.js"></script>
+</html>

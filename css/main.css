@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Afacad Flux", sans-serif;
+    
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav .top-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2564cf;
+    padding: 10px 20px;
+    color: white;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo h1 {
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+nav .middle-section .search-bar {
+    width: 300px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+nav .right-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav .right-section a {
+    color: white;
+    font-size: 28px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 200px;
+    height: calc(100vh - 55px);
+    background-color: #fff;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar .menu-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    height: 60px;
+    transition: justify-content 0.3s;
+}
+
+.sidebar.collapsed .menu-1 {
+    justify-content: center;
+    padding: 0;
+}
+
+.sidebar .menu-1 a {
+    font-size: 32px;
+    transition: font-size 0.3s;
+}
+
+.sidebar.collapsed .menu-1 a {
+    font-size: 36px;
+    margin-right: 0;
+}
+
+.sidebar .menu-1 h2 {
+    margin-right: 10px;
+}
+
+.sidebar h2 {
+    margin: 0;
+    padding: 15px 0;
+    font-size: 18px;
+    white-space: nowrap;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.sidebar h3 {
+    margin: 0;
+    padding: 2px 0;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 7px 9px;
+    color: #0381fe;
+    font-size: 15px;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    justify-content: center;
+}
+
+.sidebar a:hover {
+    background-color: #0381fe;
+    color: white;
+    border-radius: 4px;
+}
+
+.sidebar .links-icons {
+    font-size: 28px;
+    visibility: hidden;
+    transition: visibility 0.3s, font-size 0.3s;
+}
+
+.sidebar.collapsed h2,
+.sidebar.collapsed h3 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.sidebar.collapsed .links-icons {
+    visibility: visible;
+    font-size: 36px;
+}
+
+.sidebar .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.sidebar .end {
+    position: absolute;
+    bottom: 20px;
+    margin-left: 20px;
+}
+
+.sidebar.collapsed .links {
+    flex-direction: column;
+    padding: 15px 0;
+    justify-content: center;
+}
+
+.sidebar.collapsed .links-icons {
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar.collapsed .menu-1 {
+    justify-content: center;
+}
+
+.sidebar.collapsed .menu-1 h2 {
+    display: none;
+}
+
+.sidebar.collapsed .menu-1 a {
+    font-size: 36px;
+}
+
+.container {
+    margin-top: 55px;
+    display: flex;
+    min-height: calc(100vh - 55px);
+    transition: margin-left 0.3s;
+}
+
+.task-section {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-view {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-view a {
+    font-size: 30px;
+    color: #0381fe;
+    cursor: pointer;
+}
+
+.task-header h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.actions {
+    display: flex;
+    gap: 25px;
+}
+
+.actions a {
+    font-size: 28px;
+    color: #0381fe;
+}
+
+.main-content {
+    margin-top: 80px;
+    margin-left: 270px;
+    padding: 20px;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .container {
+        margin-left: 80px;
+    }
+
+    .sidebar.collapsed {
+        width: 80px;
+    }
+
+    .sidebar h2,
+    .sidebar h3 {
+        font-size: 14px;
+    }
+
+    .sidebar.collapsed h2,
+    .sidebar.collapsed h3 {
+        display: none;
+    }
+
+    .sidebar.collapsed .links {
+        padding-left: 0;
+    }
+
+    .sidebar.collapsed .menu-1 {
+        justify-content: center;
+    }
+}
