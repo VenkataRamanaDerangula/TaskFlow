@@ -68,6 +68,10 @@ TASKFL/
 - **Task Management:** Create, update, and rearrange tasks on the boards page.
 - **Data Visualization:** Track progress on the graph page.
 
+### Deployed Link
+
+You can access the live version of TaskFlow [here](https://taskflow-manager.netlify.app/) .
+
 ### Summary
 TaskFlow is a user-friendly task management system designed to help individuals and teams organize and track tasks effectively. Built using HTML, CSS, and JavaScript, TaskFlow offers customizable boards, data visualization, and secure authentication. Its responsive design ensures usability on both desktop and mobile devices, making it a valuable tool for simplifying task management and boosting productivity in personal and professional settings.
 
