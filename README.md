@@ -1,7 +1,7 @@
 
 # TaskFlow - A Task Management System
 
-## Project Description
+## Description
 TaskFlow offers a visual approach to organizing and tracking tasks in real-time. It is designed for users seeking a simple and effective solution for project management. Built using HTML, CSS, and JavaScript, TaskFlow is easy to use, fully responsive, and requires no backend setup.
 
 ## Features
