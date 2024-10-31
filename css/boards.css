@@ -71,7 +71,30 @@ button:hover {
     min-height: 100px;
 }
 
-@media (max-width: 768px) {
+/* Styles for screens below 1330px */
+@media (max-width: 1330px) {
+    .column {
+        max-width: 45%;
+    }
+
+    .kanban-board {
+        gap: 15px;
+    }
+}
+
+/* Styles for screens below 1200px */
+@media (max-width: 1200px) {
+    .column {
+        max-width: 100%;
+    }
+
+    #new-task {
+        width: 100%;
+    }
+}
+
+/* Styles for screens below 900px */
+@media (max-width: 900px) {
     .kanban-board {
         flex-direction: column;
     }
@@ -81,18 +104,88 @@ button:hover {
         margin-bottom: 20px;
     }
 
-    #new-task {
+    input[type="text"] {
         width: 100%;
     }
 }
 
-@media (max-width: 480px) {
-    .task-item {
-        font-size: 14px;
+/* Styles for screens below 800px */
+@media (max-width: 800px) {
+    .task-item, .task {
+        font-size: 16px;
+        padding: 8px;
     }
 
     button {
         width: 100%;
+        padding: 10px;
+    }
+
+    #delete-list {
         padding: 8px;
+        min-height: 80px;
+    }
+
+    .column {
+        max-width: 100%;
+        padding: 8px;
+    }
+}
+
+/* Styles for screens below 700px */
+@media (max-width: 700px) {
+    .task-item, .task {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #delete-list {
+        padding: 6px;
+        min-height: 70px;
+    }
+}
+
+/* Styles for screens below 600px */
+@media (max-width: 600px) {
+    .task-item, .task {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #delete-list {
+        padding: 6px;
+        min-height: 70px;
+    }
+}
+
+/* Styles for screens below 300px */
+@media (max-width: 300px) {
+    .task-item, .task {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .theme-toggle {
+        margin-left: 5px;
+    }
+
+    #delete-list {
+        padding: 4px;
+        min-height: 50px;
     }
 }

@@ -5,12 +5,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Afacad Flux", sans-serif;
-    
+
 }
 
 body {
     background-color: #f4f6f9;
-    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -27,6 +28,7 @@ nav .top-nav {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -204,10 +206,11 @@ nav .right-section a {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .task-view {
-    margin-top: 20px;
+
     display: flex;
     align-items: center;
     gap: 10px;
@@ -246,7 +249,58 @@ input[type="text"] {
     margin-bottom: 10px;
 }
 
+@media (min-width: 1201px) {
+    .sidebar {
+        width: 240px;
+    }
 
+    .container {
+        margin-left: 240px;
+        max-width: 1350px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .container {
+        margin-left: 220px;
+        padding: 20px;
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .container {
+        margin-left: 180px;
+        padding: 20px;
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .container {
+        margin-left: 150px;
+        padding: 16px;
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        max-width: 700px;
+    }
+}
 
 @media (max-width: 768px) {
     .sidebar {
@@ -255,10 +309,8 @@ input[type="text"] {
 
     .container {
         margin-left: 80px;
-    }
-
-    .sidebar.collapsed {
-        width: 80px;
+        padding: 12px;
+        max-width: 600px;
     }
 
     .sidebar h2,
@@ -271,11 +323,115 @@ input[type="text"] {
         display: none;
     }
 
-    .sidebar.collapsed .links {
-        padding-left: 0;
+    .sidebar a {
+        font-size: 12px;
     }
 
-    .sidebar.collapsed .menu-1 {
-        justify-content: center;
+    .task-section {
+        padding: 10px;
+    }
+
+    nav .top-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav .middle-section,
+    nav .right-section {
+        display: none;
+    }
+
+    .sidebar.collapsed + .container {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .container {
+        margin-left: 60px;
+        padding: 10px;
+        max-width: 500px;
+    }
+
+    nav .logo h1 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        width: 50px;
+    }
+
+    .container {
+        margin-left: 50px;
+        padding: 8px;
+        max-width: 400px;
+    }
+
+    .task-header h1 {
+        font-size: 20px;
+    }
+
+    nav .top-nav {
+        padding: 8px;
+        align-items: center;
+    }
+
+    nav {
+        padding-left: 60px;
+    }
+
+    .sidebar.collapsed .links-icons {
+        font-size: 20px;
+    }
+
+    .task-section {
+        padding: 5px;
+    }
+
+    .actions a,
+    .right-section a {
+        font-size: 18px;
+    }
+
+    .sidebar.collapsed + .container {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 40px;
+    }
+
+    .container {
+        margin-left: 40px;
+        padding: 6px;
+        max-width: 350px;
+    }
+
+    .sidebar.collapsed + .container {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 300px) {
+    .sidebar {
+        width: 30px;
+    }
+
+    .container {
+        margin-left: 30px;
+        padding: 4px;
+        max-width: 250px;
+    }
+
+    .sidebar.collapsed + .container {
+        margin-left: 30px;
     }
 }
