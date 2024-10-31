@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="https://kit.fontawesome.com/bf60b033ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/boards.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav>
+        <div class="top-nav">
+            <div class="logo">
+                <h1>TaskFlow</h1>
+            </div>
+            <div class="middle-section">
+                <input type="text" placeholder="Search..." class="search-bar" />
+            </div>
+            <div class="right-section">
+                <a href="#" class="material-symbols-outlined">help</a>
+                <a href="#" class="material-symbols-outlined">settings</a>
+                <a href="#" class="material-symbols-outlined">account_circle</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="menu-1">
+            <h2>Menu</h2>
+            <a href="#" class="toggle-sidebar material-symbols-outlined">menu</a>
+        </div>
+        <hr />
+        <div class="links">
+            <a href="#" class="material-symbols-outlined links-icons">home</a>
+            <h3>Home</h3>
+        </div>
+        <div class="links">
+            <a href="#" class="material-symbols-outlined links-icons">task</a>
+            <h3 class="task-heading">Tasks</h3>
+        </div>
+        <div class="links">
+            <a href="#" class="material-symbols-outlined links-icons other-class">team_dashboard</a>
+            <h3 id="boards">Boards</h3>
+        </div>
+        <div class="links">
+            <a href="#" class="material-symbols-outlined links-icons">monitoring</a>
+            <h3>Graph view</h3>
+        </div>
+        <div class="links">
+            <a href="#" class="material-symbols-outlined links-icons">settings</a>
+            <h3>Settings</h3>
+        </div>
+        <div class="links end">
+            <a href="#" class="material-symbols-outlined links-icons">logout</a>
+            <h3>Log out</h3>
+        </div>
+    </div>
+
+    <section class="section-1">
+        <div class="container">
+            <!-- Task Section -->
+            <div class="task-section">
+                <div class="task-header">
+                    <div class="task-view">
+                        <a href="#" class="material-symbols-outlined">team_dashboard</a>
+                        <h1>Boards</h1>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="material-symbols-outlined">swap_vert</a>
+                        <a href="#" class="material-symbols-outlined">list</a>
+                        <a href="#" class="material-symbols-outlined">grid_view</a>
+                    </div>
+                </div>
+                <!-- code here tasks -->
+
+                <div class="kanban-board">
+                    <div class="column">
+                        <h2>To Do</h2>
+                        <div id="todo-list" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <!-- Tasks will be added here dynamically -->
+                        </div>
+                        <input type="text" id="new-task" placeholder="Add new task..." />
+                        <button onclick="addTask()">Add Task</button>
+                    </div>
+                    <div class="column">
+                        <h2>In Progress</h2>
+                        <div id="in-progress" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h2>Done</h2>
+                        <div id="done" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        </div>
+                    </div>
+                    <div class="column" id="delete-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p>Drag  your tasks to delete</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+  
+</body>
+<script src="./js/boards.js"></script>
+</html>
+
+     
