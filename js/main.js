@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (linkName === "home")
       targetUrl = window.location.href; // Refresh the current page
     else if (linkName === "boards") targetUrl = "boards.html";
-    // else if (linkName === "graph view") targetUrl = "graph.html";
+    else if (linkName === "graph view") targetUrl = "graph.html";
     // else if (linkName === "calendar") targetUrl = "calendar.html";
     // else if (linkName === "settings") targetUrl = "settings.html";
     else if (linkName === "log out") targetUrl = "index.html";
